@@ -76,6 +76,7 @@ public class DefaultUserService implements UserService {
         if (!userRepository.existsById(userId)) {
             throw new BadRequestException("User not found");
         }
+        userRepository.deleteAllPlacesOfResidence(userId);
         userRepository.deleteById(userId);
     }
 
