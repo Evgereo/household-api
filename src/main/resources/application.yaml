@@ -1,0 +1,17 @@
+server:
+  port: 8080
+spring:
+  liquibase:
+    enabled: true
+  datasource:
+    url: jdbc:postgresql://localhost:8001/household
+    username: postgres
+    password: password
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+token:
+  signing:
+    key: 76cb3ea268adbab0de0218f8934c81de5bc743589f6ef72c7132508ee84b9730f9f50127e9a0edcb09dcd9e87372ad0f0e3d134b3ff13b8eb2e6985712c25a2dfb7c9c1324fe2a355f4b143ab7dfec6cdff12d34c3a1d3748c71ac4eeaf38507c1cdb80631f1894689ccfd7f65d7b3828792a892da57d2fe47b09d64bad38dff27e6f3dfeecfd5d69300d00d754d71945211df436e4b83891eaf8e43afc23ef2bcca353711d0144ad0f0935f36031789338708410f93b0bb41fa4dd8b1e602fb3cdf33788aa87c9332767bf67a80a7d416d2c9284587618268f007c0296e126b5bbab3547ef836f6819c6909bbfe1ab6a662e6e00d38b787f0f3addff8e68782
+    time: 600000

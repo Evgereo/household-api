@@ -1,0 +1,20 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-c
+      author: Evgereo
+      changes:
+        - createTable:
+            tableName: resident
+            columns:
+              - column:
+                  name: house_id
+                  type: bigint
+                  constraints:
+                    foreignKeyName: house_resident_fk
+                    references: house(id)
+              - column:
+                  name: resident_id
+                  type: bigint
+                  constraints:
+                    foreignKeyName: account_resident_fk
+                    references: account(id)

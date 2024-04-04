@@ -1,0 +1,7 @@
+databaseChangeLog:
+  - include:
+      file: db/changelog/changeset/create-account-table.yaml
+  - include:
+      file: db/changelog/changeset/create-house-table.yaml
+  - include:
+      file: db/changelog/changeset/create-resident-table.yaml

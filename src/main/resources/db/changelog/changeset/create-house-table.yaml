@@ -1,0 +1,24 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-house
+      author: Evgereo
+      changes:
+        - createTable:
+            tableName: house
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: address
+                  type: varchar(255)
+              - column:
+                  name: owner_id
+                  type: bigint
+                  constraints:
+                    foreignKeyName: account_house_fk
+                    references: account(id)
